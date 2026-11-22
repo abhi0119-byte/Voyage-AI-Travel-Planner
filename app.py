@@ -19,9 +19,24 @@ def create_pdf(ai_text):
 
     buffer = BytesIO()
 
-    # Windows font supports the rupee symbol
-    font_path = "C:/Windows/Fonts/arial.ttf"
-    pdfmetrics.registerFont(TTFont("VoyageArial", font_path))
+    
+    import os
+
+    font_paths = [
+        "C:/Windows/Fonts/arial.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    ]
+
+    font_path = next(
+        (path for path in font_paths if os.path.exists(path)),
+        None
+    )
+
+    if font_path:
+        pdfmetrics.registerFont(TTFont("VoyageArial", font_path))
+    else:
+        raise FileNotFoundError("No supported PDF font found")
+
 
     styles = getSampleStyleSheet()
     body = ParagraphStyle(
