@@ -5,6 +5,11 @@ An AI-powered travel planning web application built using Python, Streamlit, and
 
 **Voyage AI** helps users generate personalized travel itineraries based on their destination, budget, trip duration, and number of travellers.
 
+## 🌐 Live Demo
+
+🚀 **Try Voyage AI here:**
+[Launch Voyage AI Travel Planner](https://voyage-ai-travel-planner-pmh37idj6yffzggeydj94c.streamlit.app/)
+
 ## 🚀 Features
 
 - AI-powered travel itinerary generation
