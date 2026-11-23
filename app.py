@@ -20,23 +20,13 @@ def create_pdf(ai_text):
     buffer = BytesIO()
 
     
-    import os
+    from pathlib import Path
 
-    font_paths = [
-        "C:/Windows/Fonts/arial.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-    ]
+    font_path = Path(__file__).resolve().parent / "fonts" / "NotoSans.ttf"
 
-    font_path = next(
-        (path for path in font_paths if os.path.exists(path)),
-        None
+    pdfmetrics.registerFont(
+        TTFont("VoyageArial", str(font_path))
     )
-
-    if font_path:
-        pdfmetrics.registerFont(TTFont("VoyageArial", font_path))
-    else:
-        raise FileNotFoundError("No supported PDF font found")
-
 
     styles = getSampleStyleSheet()
     body = ParagraphStyle(
