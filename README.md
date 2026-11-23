@@ -13,6 +13,10 @@ An AI-powered travel planning web application built using Python, Streamlit, and
 
 ![Voyage AI Homepage](screenshots/homepage.png)
 
+### Generated Travel Plan
+
+![Voyage AI Generated Travel Plan](screenshots/travel_plan.png)
+
 
 🚀 **Try Voyage AI here:**
 [Launch Voyage AI Travel Planner](https://voyage-ai-travel-planner-pmh37idj6yffzggeydj94c.streamlit.app/)
