@@ -25,6 +25,21 @@ An AI-powered travel planning web application built using Python, Streamlit, and
 
 ## 🤖 Multi-Agent Architecture
 
+```mermaid
+flowchart TD
+    A[User Input] --> B[Streamlit Application]
+    B --> C[Travel Coordinator]
+    C --> D[Destination Agent]
+    C --> E[Budget Agent]
+    C --> F[Hotel Agent]
+    C --> G[Food Agent]
+    C --> H[Transport Agent]
+    C --> I[Itinerary Agent]
+    C --> J[AI Agent]
+    J --> K[Groq API]
+```
+
+
 Voyage AI uses a coordinator to organize the work of specialized travel planning agents.
 
 | Agent | Responsibility |
